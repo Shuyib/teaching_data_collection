@@ -6,7 +6,7 @@ knowing the market capitalization of companies is important for investors to adj
 ## Installation
 Use the package manager [pip](https://pip.pypa.io/en/stable/) to install the following packages.
 
-NB. You can install the packages in a virtual environment or globally.
+NB. You can install the packages in a virtual environment or globally. We used python 3.10 for this example.
 
 ### Virtual Environment
 
