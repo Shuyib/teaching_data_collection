@@ -1,0 +1,6 @@
+black
+requests
+pandas
+lxml
+matplotlib
+seaborn

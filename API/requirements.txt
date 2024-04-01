@@ -1,0 +1,4 @@
+requests
+polars
+pandas
+pyarrow
