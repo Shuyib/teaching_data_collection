@@ -1,4 +1,4 @@
-# Web Scraping Wikipedia
+# Web Scraping Wikipedia getting data from a particular website to do further analysis.   
 This project is getting data from Wikipedia using Python. Particularly, information market capitalization for top companies in the world. Why Wikipedia? Wikipedia is a great source of information and it is free. Besides,
 knowing the market capitalization of companies is important for investors to adjust their portfolios.
 
