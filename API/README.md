@@ -1,5 +1,5 @@
-# Application Programming Interface (API) 
-This is a data collection project using an API. The project is collecting data from the [News API](https://newsapi.org/). The project is written in Python. 
+# Application Programming Interface (API) - It's a set of rules and commands that software systems use to communicate with each other. A bridge between software systems 🌉      
+This is a data collection project using an API. The project is collecting data from the [News API](https://newsapi.org/). You'll an API key from the News API. You can sign up for free. 
 
 
 ## Installation
