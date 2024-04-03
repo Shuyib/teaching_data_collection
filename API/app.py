@@ -1,5 +1,9 @@
 """
-Use the newsapi to get the latest news about Artificial Intelligence and Machine Learning and display the top 5 news articles
+Use the newsapi to get the latest news about Artificial Intelligence and Machine Learning 
+by querying the newsapi. (You try something else
+Use JSON normalize pandas method to format the JSON into a dictionary
+& chain it with polars to convert to a dataframe and finally store the
+file in memoty.
 """
 import os
 import requests
@@ -41,9 +45,9 @@ print("====================================")
 print("Convert the DataFrame to a Polars DataFrame")
 
 
-# Display the top 5 news articles
-top_articles = pl_df.head(5)
-print(top_articles.sample(5))
+# Display a random sample of 5 articles
+top_articles = top_articles.sample(5)
+print(top_articles)
 
 # store the data in a CSV file
 print("====================================")
