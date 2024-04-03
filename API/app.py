@@ -3,7 +3,7 @@ Use the newsapi to get the latest news about Artificial Intelligence and Machine
 by querying the newsapi. (You try something else
 Use JSON normalize pandas method to format the JSON into a dictionary
 & chain it with polars to convert to a dataframe and finally store the
-file in memoty.
+file in memory.
 """
 import os
 import requests
