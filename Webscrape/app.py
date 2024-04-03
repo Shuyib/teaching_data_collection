@@ -1,6 +1,6 @@
-"""An application that gets the latest news from https://en.wikipedia.org/wiki/List_of_public_corporations_by_market_capitalization and displays the top 5 news articles
+"""An application that gets the latest news from https://en.wikipedia.org/wiki/List_of_public_corporations_by_market_capitalization 
 
-Using requests and BeautifulSoup to scrape the table of trillion dollar companies from Wikipedia and display the top 5 companies by market capitalization.
+Extract a table from Wikipedia, clean, visualize it using a multiple line plots & save it in memory
 """
 
 import requests
