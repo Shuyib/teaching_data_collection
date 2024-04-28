@@ -46,7 +46,7 @@ print("Convert the DataFrame to a Polars DataFrame")
 
 
 # Display a random sample of 5 articles
-top_articles = top_articles.sample(5)
+top_articles = top_articles.sample(n=5)
 print(top_articles)
 
 # store the data in a CSV file
