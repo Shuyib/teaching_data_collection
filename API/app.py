@@ -9,6 +9,7 @@ import os
 import requests
 import polars as pl
 import pandas as pd
+from tenacity import retry, stop_after_attempt, wait_fixed
 
 
 # Get the API key from the environment variable
@@ -17,16 +18,26 @@ API_KEY = os.getenv("NEWS_API_KEY")
 # Make a request to the news API
 URL = f"https://newsapi.org/v2/everything?q=Artificial Intelligence, Machine Learning&apiKey={API_KEY}"
 
-try:
-    response = requests.get(URL)
-    response.raise_for_status()
-    print(response.status_code)
-except requests.exceptions.HTTPError as err:
-    print(f"HTTP error occurred: {err}")
-except requests.exceptions.RequestException as err:
-    print(f"An error occurred: {err}")
-except Exception as err:
-    print(f"An unexpected error occurred: {err}")
+# retry the request 3 times with a 1 second wait time
+# if an error occurs show the error and raise the error
+@retry(stop=stop_after_attempt(3), wait=wait_fixed(1))
+def make_request(url):
+    try:
+        response = requests.get(url)
+        response.raise_for_status()
+        print(response.status_code)
+        return response
+    except requests.exceptions.HTTPError as err:
+        print(f"HTTP error occurred: {err}")
+        raise err
+    except requests.exceptions.RequestException as err:
+        print(f"An error occurred: {err}")
+        raise err
+    except Exception as err:
+        print(f"An unexpected error occurred: {err}")
+        raise err
+
+response = make_request(URL)
 
 # Convert the response to a DataFrame
 data = response.json()
@@ -46,7 +57,7 @@ print("Convert the DataFrame to a Polars DataFrame")
 
 
 # Display a random sample of 5 articles
-top_articles = top_articles.sample(n=5)
+top_articles = pl_df.sample(n=5)
 print(top_articles)
 
 # store the data in a CSV file
