@@ -7,4 +7,4 @@ Learn how to do data collection putting a couple of things into consideration. S
 4. [Retrying](https://medium.com/@API4AI/best-practice-implementing-retry-logic-in-http-api-clients-0b5469c08ced) API request incase of failure.   
 
 You will learn how to query the newsAPI and scrape information from Wikipedia. These are common applications of 
-collecting data in data science. Here we go!!!  
+collecting data in data science. NB: You'll need an [API key](https://newsapi.org/) for the newsAPI Here we go!!!  
