@@ -8,3 +8,8 @@ Learn how to do data collection putting a couple of things into consideration. S
 
 You will learn how to query the newsAPI and scrape information from Wikipedia. These are common applications of 
 collecting data in data science. NB: You'll need an [API key](https://newsapi.org/) for the newsAPI. Here we go!!!  
+
+Check out the folders for more information
+
+[Getting Data off an API](API)    
+[Webscraping](Webscrape)
