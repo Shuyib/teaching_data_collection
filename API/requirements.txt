@@ -1,4 +1,4 @@
-requests==2.32.0
+requests==2.32.4
 polars==0.20.26
 pandas==2.2.2
 pyarrow==16.1.0
